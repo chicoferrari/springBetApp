@@ -13,8 +13,6 @@ import java.util.List;
 @EqualsAndHashCode
 @AllArgsConstructor
 public class BetTicket {
-    private Long id;
-    private Mail alias;
     private Mail mail;
 
     private List<Integer>TicketNumbers;

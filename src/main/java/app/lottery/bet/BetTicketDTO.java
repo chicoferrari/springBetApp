@@ -1,7 +1,6 @@
 package app.lottery.bet;
 
 import lombok.Value;
-
 import javax.validation.constraints.*;
 import java.util.List;
 
@@ -15,6 +14,6 @@ public class BetTicketDTO {
     String userMail;
 
     @Size(min = 6, max = 6)
-    List<@Min(1) @Max(60) Integer>bets;  
+    List<@Min(1) @Max(60) Integer> bets;  
 
 }
