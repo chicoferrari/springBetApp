@@ -1,9 +1,10 @@
 package app.lottery.bet;
 
 import lombok.*;
+import java.util.List;
 
 /**
- * RASCUNHO - Classe que representa as apostas.
+ * Recebe os números para a aposta realizada.
  */
 @Getter
 @ToString
@@ -11,11 +12,6 @@ import lombok.*;
 @AllArgsConstructor
 public class Bet {
 
-    private int factorA;
-    private int factorB;
-    private int factorC;
-    private int factorD;
-    private int factorE;
-    private int factorF;
+    private List<Integer>TicketNumbers;
     
 }

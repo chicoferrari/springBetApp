@@ -2,9 +2,11 @@ package app.lottery.bet;
 
 import lombok.*;
 import app.lottery.user.Mail;
+import java.util.List;
+
 
 /**
- * RASCUNHO - Identifica as apostas do {@link Mail}.
+ * Identifica as apostas do {@link Mail}.
  */
 @Getter
 @ToString
@@ -12,14 +14,9 @@ import app.lottery.user.Mail;
 @AllArgsConstructor
 public class BetTicket {
     private Long id;
-    private Long userId;
-    private int factorA;
-    private int factorB;
-    private int factorC;
-    private int factorD;
-    private int factorE;
-    private int factorF;
-    
-    private int betSort;
+    private Mail alias;
+    private Mail mail;
+
+    private List<Integer>TicketNumbers;
     
 }
