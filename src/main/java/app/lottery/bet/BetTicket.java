@@ -1,20 +1,28 @@
 package app.lottery.bet;
 
 import lombok.*;
-import app.lottery.user.Mail;
-import java.util.List;
+import app.lottery.user.*;
 
+import java.util.List;
+import javax.persistence.*;
 
 /**
- * Identifica as apostas do {@link Mail}.
+ * Vincula a aposta ao usuário {@link Mail}.
  */
-@Getter
-@ToString
-@EqualsAndHashCode
+@Entity
+@Data 
 @AllArgsConstructor
+@NoArgsConstructor
 public class BetTicket {
-    private Mail mail;
-
-    private List<Integer>TicketNumbers;
-    
+    @Id 
+    @GeneratedValue    
+    private Long id;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "USER_ID")
+    private User userMail;
+      
+    @ElementCollection
+    /*@CollectionTable(name="TicketNumbers", joinColumns=@JoinColumn(name="USER_ID"))
+    @Column(name="BETS")*/
+    private List<Integer> TicketNumbers;    
 }

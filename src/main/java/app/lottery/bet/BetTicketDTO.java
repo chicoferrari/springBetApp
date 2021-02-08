@@ -1,11 +1,11 @@
 package app.lottery.bet;
 
-import lombok.Value;
+import lombok.*;
 import javax.validation.constraints.*;
 import java.util.List;
 
 /**
- * Filtragem dos dados.
+ * Filtragem da aposta.
  */
 @Value
 public class BetTicketDTO {

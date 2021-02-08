@@ -4,7 +4,7 @@ import lombok.*;
 import java.util.List;
 
 /**
- * Recebe os números para a aposta realizada.
+ * Recebe os números para a aposta.
  */
 @Getter
 @ToString

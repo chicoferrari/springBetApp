@@ -8,10 +8,10 @@ import java.util.List;
  * Filtragem do email.
  */
 @Value
-public class MailDTO {
+public class UserDTO {
 
     @NotBlank
     @Email 
-    String emailAddress;
+    String userMail;
 
 }
