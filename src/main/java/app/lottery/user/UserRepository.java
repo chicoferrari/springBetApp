@@ -1,11 +1,11 @@
 package app.lottery.user;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
+public interface UserRepository extends JpaRepository<User, Long> {
 
-public interface UserRepository extends CrudRepository<User, String> {
-
-    User findByUserMail(final String userMail);
-    
+	static User findByMail(String userMail) {
+		return null;
+	}
+       
 }

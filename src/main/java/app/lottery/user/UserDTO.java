@@ -1,17 +1,20 @@
 package app.lottery.user;
 
-import lombok.*;
-import javax.validation.constraints.*;
-import java.util.List;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+import lombok.Value;
 
 /**
  * Filtragem do email.
  */
-@Value
+ @Value
 public class UserDTO {
 
+    @NotNull
     @NotBlank
     @Email 
-    String userMail;
+    private String userMail;
 
 }

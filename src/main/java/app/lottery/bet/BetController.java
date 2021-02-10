@@ -15,7 +15,7 @@ public class BetController {
 
     private final BetGeneratorService betGeneratorService;
 
-    @GetMapping("/random")
+    @GetMapping("")
     Bet getRandomBet() {
         Bet bet = betGeneratorService.randomBet();
         log.info("Gerando uma nova aposta: {}", bet);
