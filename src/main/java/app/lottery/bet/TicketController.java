@@ -16,27 +16,27 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Classe que implementa a API REST que recebe (GET) o email do usuário.
+ * Classe que fornece uma API Rest para receber os email dos usuários.
  */
 @Slf4j
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/bets")
-class BetTicketController {
+@RequestMapping("")
+class TicketController {
 
-    private final BetService betService;
-        
-    @PostMapping("/bet")
-    ResponseEntity<BetTicket> postResult(
-            @RequestBody @Valid BetTicketDTO betTicketDTO) {
-        return ResponseEntity.ok(betService.verifyTicket(betTicketDTO));
-    }
+    private final TicketGeneratorService ticketGeneratorService;
 
-    @GetMapping
-    ResponseEntity<List<BetTicket>> getStatistics(@RequestParam("userMail") String userMail) {
+    @PostMapping("/aposta")
+    ResponseEntity<Ticket> postTicket(
+        @RequestBody @Valid TicketDTO ticketDTO) {
+            log.info("Criando bilhete: {}", ticketDTO);
+            return ResponseEntity.ok(ticketGeneratorService.verifiedTicket(ticketDTO));
+        }
+    
+    @GetMapping("/historico")
+    ResponseEntity<List<Ticket>> historicoApostas(@RequestParam("userMail") String userMail) {
         return ResponseEntity.ok(
-            betService.getStatsForUser(userMail)
-        );    
+            ticketGeneratorService.getStatsForUser(userMail)
+        );
     }
- 
 }

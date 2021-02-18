@@ -4,7 +4,7 @@ import lombok.*;
 import java.util.List;
 
 /**
- * Recebe os números para a aposta.
+ * Classe que cria uma sequência de números aleatórios.
  */
 @Getter
 @ToString
@@ -12,6 +12,6 @@ import java.util.List;
 @AllArgsConstructor
 public class Bet {
 
-    private List<Integer>TicketNumbers;
+    private List<Integer>Bet;
     
 }

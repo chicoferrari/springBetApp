@@ -3,6 +3,9 @@ package app.lottery.user;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 /**
  * Armazena as informações do usuário.
@@ -17,11 +20,12 @@ public class User {
     @GeneratedValue
     private Long id;
     
-    @Column(nullable = false, unique = true, length = 45)
+    @Email
+    @NotBlank
+    @NotNull
     private String userMail;
 
     public User(final String userMail) {
         this(null, userMail);
     }
-
 }

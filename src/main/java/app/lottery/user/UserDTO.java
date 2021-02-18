@@ -9,12 +9,10 @@ import lombok.Value;
 /**
  * Filtragem do email.
  */
- @Value
+@Value
+@NotNull
 public class UserDTO {
-
-    @NotNull
-    @NotBlank
-    @Email 
+    @Email(message = "E-mail válido requerido.")
+    @NotBlank(message = "Digite um e-mail.")
     private String userMail;
-
 }
