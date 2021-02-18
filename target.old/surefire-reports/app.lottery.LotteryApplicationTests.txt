@@ -1,9 +1,0 @@
--------------------------------------------------------------------------------
-Test set: app.lottery.LotteryApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 22.934 s <<< FAILURE! - in app.lottery.LotteryApplicationTests
-contextLoads  Time elapsed: 0.003 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'betTicketController' defined in file [z:\rafael.fatec.sp.gov.br\OneDrive - Fatec Centro Paula Souza\_SPRING\springBetApp\target\classes\app\lottery\bet\BetTicketController.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'app.lottery.user.Mail' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'app.lottery.user.Mail' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-
